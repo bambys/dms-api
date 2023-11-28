@@ -17,7 +17,7 @@ The API is secured by Basic Auth plus BCrypt encryption - see src\main\java\com\
 # Usage
 Via endpoints (see src\main\java\com\petrbambas\rest\products\controller) provides processing documents and protocols entities. They support CRUD operations (GET, POST, PUT, DELETE) following the requirements:
   HttpMethod.GET http://localhost:8080/api/protocols
-#HttpMethod.PUT http://localhost:8080/api/protocols/**
+# HttpMethod.PUT http://localhost:8080/api/protocols/**
 
  JSON body example:
  {
