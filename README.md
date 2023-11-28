@@ -15,7 +15,10 @@ Initial SQL scripts are saved in the root folder "SQL Scripts" of the project. T
 The API is secured by Basic Auth plus BCrypt encryption - see src\main\java\com\petrbambas\rest\products\config\SecurityConfig.java. To get access to endpoints use petr as the username and Rolp4/47*-9 as the password (both data is saved in SecurityConfig too)
 
 # Usage
-Via endpoints (see src\main\java\com\petrbambas\rest\products\controller) provides processing documents and protocols entities. They support CRUD operations (GET, POST, PUT, DELETE) following the requirements:
+Via endpoints (see src\main\java\com\petrbambas\rest\products\controller) provides processing documents and protocols entities. CreatedAt and CreatedBy attritutes are generated automatically by API.
+Endpoints support CRUD operations (GET, POST, PUT, DELETE) following the requirements:
+
+## HttpMethod.GET http://localhost:8080/api/documents
 
 ## HttpMethod.POST http://localhost:8080/api/documents
 JSON body example:
@@ -24,23 +27,37 @@ JSON body example:
 "type": "DOC"
 }
 
-
+## HttpMethod.PUT http://localhost:8080/api/documents/1
+http://localhost:8080/api/documents/1
 
 ## HttpMethod.GET http://localhost:8080/api/protocols
 
-
-## HttpMethod.PUT http://localhost:8080/api/protocols/**
-
- JSON body example:
- {
-    "name": "Project No 96",
-    "status": "CANCELLED",
+## HttpMethod.POST http://localhost:8080/api/protocols
+JSON body example:
+{
+    "name": "Documentation of Marketing project - Winter 2023",
+    "status": "NEW",
     "documents": [
-        {"id":1 
+        {"id":1
         },
         {"id":2
         },
         {"id":4
+        }
+    ]
+}
+
+## HttpMethod.PUT http://localhost:8080/api/protocols/**
+JSON body example:
+{
+    "name": "Documentation of Marketing project - Merry Christmas 2023",
+    "status": "PREPARED_FOR_SHIPMENT",
+    "documents": [
+        {"id":2
+        },
+        {"id":3
+        },
+        {"id":5
         }
     ]
 }
