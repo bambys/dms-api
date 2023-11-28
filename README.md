@@ -35,7 +35,7 @@ http://localhost:8080/api/documents/1
 ## HttpMethod.POST http://localhost:8080/api/protocols
 JSON body example:
 {
-    "name": "Documentation of Marketing project - Winter 2023",
+    "name": "Marketing project - Winter 2023",
     "status": "NEW",
     "documents": [
         {"id":1
@@ -50,7 +50,7 @@ JSON body example:
 ## HttpMethod.PUT http://localhost:8080/api/protocols/**
 JSON body example:
 {
-    "name": "Documentation of Marketing project - Merry Christmas 2023",
+    "name": "Marketing project - Merry Christmas 2023",
     "status": "PREPARED_FOR_SHIPMENT",
     "documents": [
         {"id":2
