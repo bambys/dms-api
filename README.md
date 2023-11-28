@@ -28,6 +28,11 @@ JSON body example:
 }
 
 ## HttpMethod.PUT http://localhost:8080/api/documents/1
+JSON body example:
+{
+"name":"Price list",
+"type": "XLSX"
+}
 
 ## Http.Method.DELETE http://localhost:8080/api/documents/8
 
