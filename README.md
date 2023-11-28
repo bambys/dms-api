@@ -28,7 +28,8 @@ JSON body example:
 }
 
 ## HttpMethod.PUT http://localhost:8080/api/documents/1
-http://localhost:8080/api/documents/1
+
+## Http.Method.DELETE http://localhost:8080/api/documents/8
 
 ## HttpMethod.GET http://localhost:8080/api/protocols
 
@@ -47,7 +48,7 @@ JSON body example:
     ]
 }
 
-## HttpMethod.PUT http://localhost:8080/api/protocols/**
+## HttpMethod.PUT http://localhost:8080/api/protocols/1
 JSON body example:
 {
     "name": "Marketing project - Merry Christmas 2023",
@@ -60,4 +61,10 @@ JSON body example:
         {"id":5
         }
     ]
+}
+
+## HttpMethod.PUT http://localhost:8080/api/protocols/1/status
+JSONF body example:
+{
+    "status": "CANCELLED"
 }
