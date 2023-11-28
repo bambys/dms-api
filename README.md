@@ -12,7 +12,7 @@ Initial SQL scripts are saved in the root folder "SQL Scripts" of the project (i
 2. schema.sql - creates tables + keys (tables names are document, protocol, protocol_document)
 3. data.sql - insert some sample data to DB tables
 
-The API is secured by Basic Auth plus BCrypt encryption - see src\main\java\com\petrbambas\dms\security\SecurityConfig.java. To get access to endpoints use petr as the username and Rolp4/47*-9 as the password (both data is saved in SecurityConfig too).
+The API is secured by Basic Authenticaton plus BCrypt encryption - see src\main\java\com\petrbambas\dms\security\SecurityConfig.java. To get access to endpoints use petr as the username and Rolp4/47*-9 as the password (both data is saved in SecurityConfig too). Basic Authentication was chosen because of its simplicity to use, production version should be secured by Oath2 (or JWT).
 
 # Usage
 Endpoints (see the list below or two classes in src\main\java\com\petrbambas\dms\controller) provide processing documents and protocols entities. CreatedAt and CreatedBy attributes are generated automatically by API. 
