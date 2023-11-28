@@ -12,11 +12,11 @@ Initial SQL scripts are saved in the root folder "SQL Scripts" of the project (w
 2. schema.sql - creates tables + keys
 3. data.sql - insert data to DB tables
 
-The API is secured by Basic Auth plus BCrypt encryption - see src\main\java\com\petrbambas\rest\products\config\SecurityConfig.java. To get access to endpoints use petr as the username and Rolp4/47*-9 as the password (both data is saved in SecurityConfig too)
+The API is secured by Basic Auth plus BCrypt encryption - see src\main\java\com\petrbambas\rest\products\config\SecurityConfig.java. To get access to endpoints use petr as the username and Rolp4/47*-9 as the password (both data is saved in SecurityConfig too).
 
 # Usage
-Via endpoints (see src\main\java\com\petrbambas\rest\products\controller) provides processing documents and protocols entities. CreatedAt and CreatedBy attritutes are generated automatically by API.
-Endpoints support CRUD operations (GET, POST, PUT, DELETE) following the requirements:
+Endpoints (see below or src\main\java\com\petrbambas\rest\products\controller) provide processing documents and protocols entities. CreatedAt and CreatedBy attritutes are generated automatically by API.
+Project contains tests classes too - controllers tests. All tests will pass when the enviroment is ready to use, some of tests uses references to id's from SQL scripts (PUT). Endpoints support CRUD operations following the requirements:
 
 ## HttpMethod.GET http://localhost:8080/api/documents
 
