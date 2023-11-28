@@ -70,7 +70,7 @@ JSON body example:
 }
 
 ## HttpMethod.PUT http://localhost:8080/api/protocols/*/status
-JSONF body example:
+JSON body example:
 {
     "status": "CANCELLED"
 }
