@@ -1,5 +1,5 @@
 # dms-api
-REST API using Spring Boot 3 (embedded Tomcat web server) and MS SQL Server DB as a storage
+REST API using Spring Boot 3 (embedded Tomcat web server) and MS SQL Server as a storage
 
 # Installation
 Standard Maven project, it uses MS SQL Server for storing the data. SQL database should be called DMS. So application.properties has to be updated - name of the SQL Server plus credentials as below:
