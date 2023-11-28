@@ -1,13 +1,13 @@
 # Introduction dms-api 
-REST API using Spring Boot 3 (embedded Tomcat web server) and MS SQL Server as a storage.
+REST API for processing documents and protocols. It uses Spring Boot 3 (embedded Tomcat web server) and MS SQL Server as a storage.
 
 # Installation
-Standard Maven project, it uses MS SQL Server for storing the data. SQL database should be called DMS. So application.properties has to be updated - name of the SQL Server plus credentials as below:
+Standard Maven project, database is stored in MS SQL Server. The name of the SQL database should be DMS. Application.properties file has to be updated - name of the SQL Server plus credentials as below:
 spring.datasource.url= jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=dms
 spring.datasource.username=sa
 spring.datasource.password=
 
-Initial SQL scripts are saved in the root folder "SQL Scripts" of the project (when schema.sql and data.sql were saved in resources directory there were some difficulties with foreign keys when trying to delete tables first during the API starting). They have to be run in following order then: 
+Initial SQL scripts are saved in the root folder "SQL Scripts" of the project (if schema.sql and data.sql were saved in resources directory there were some difficulties with foreign keys when trying to delete tables first during the API starting). They have to be run in following order then: 
 1. create_db.sql - in only create the DMS database
 2. schema.sql - creates tables + keys
 3. data.sql - insert data to DB tables
