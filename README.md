@@ -1,5 +1,5 @@
-# dms-api
-REST API using Spring Boot 3 (embedded Tomcat web server) and MS SQL Server as a storage
+# Introduction dms-api 
+REST API using Spring Boot 3 (embedded Tomcat web server) and MS SQL Server as a storage.
 
 # Installation
 Standard Maven project, it uses MS SQL Server for storing the data. SQL database should be called DMS. So application.properties has to be updated - name of the SQL Server plus credentials as below:
@@ -15,7 +15,8 @@ Initial SQL scripts are saved in the root folder "SQL Scripts" of the project (w
 The API is secured by Basic Auth plus BCrypt encryption - see src\main\java\com\petrbambas\rest\products\config\SecurityConfig.java. To get access to endpoints use petr as the username and Rolp4/47*-9 as the password (both data is saved in SecurityConfig too).
 
 # Usage
-Endpoints (see below or src\main\java\com\petrbambas\rest\products\controller) provide processing documents and protocols entities. CreatedAt and CreatedBy attritutes are generated automatically by API.
+Endpoints (see below or src\main\java\com\petrbambas\rest\products\controller) provide processing documents and protocols entities. CreatedAt and CreatedBy attritutes are generated automatically by API. 
+
 Project contains tests classes too - controllers tests. All tests will pass when the enviroment is ready to use, some of tests uses references to id's from SQL scripts (PUT). Endpoints support CRUD operations following the requirements:
 
 ## HttpMethod.GET http://localhost:8080/api/documents
