@@ -8,7 +8,7 @@ spring.datasource.username=sa
 spring.datasource.password=
 
 Initial SQL scripts are saved in the root folder "SQL Scripts" of the project. They have to be run in following order then: 
-1. create_db.sql - in only craete the DMS database
+1. create_db.sql - in only create the DMS database
 2. schema.sql - creates tables + keys
 3. data.sql - insert data to DB tables
 
@@ -17,11 +17,18 @@ The API is secured by Basic Auth plus BCrypt encryption - see src\main\java\com\
 # Usage
 Via endpoints (see src\main\java\com\petrbambas\rest\products\controller) provides processing documents and protocols entities. They support CRUD operations (GET, POST, PUT, DELETE) following the requirements:
   HttpMethod.GET http://localhost:8080/api/protocols
-  HttpMethod.PUT, "/api/protocols/**").hasRole("ADMIN")
-                        HttpMethod.POST, "/api/protocols").hasRole("ADMIN")
-                        HttpMethod.POST, "/api/protocols").hasRole("ASSISTANT")
-                        HttpMethod.PUT, "/api/protocols/status/**").hasRole("ADMIN")
-                        HttpMethod.GET, "/api/documents").hasRole("ADMIN")
-                        HttpMethod.POST, "/api/documents").hasRole("ADMIN")
-                        HttpMethod.PUT, "/api/documents/**").hasRole("ADMIN")
-                        HttpMethod.DELETE, "/api/documents/**").hasRole("ADMIN"));
+#HttpMethod.PUT http://localhost:8080/api/protocols/**
+
+ JSON body example:
+ {
+    "name": "Project No 96",
+    "status": "CANCELLED",
+    "documents": [
+        {"id":1 
+        },
+        {"id":2
+        },
+        {"id":4
+        }
+    ]
+}
